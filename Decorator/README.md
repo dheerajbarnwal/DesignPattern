@@ -1,1 +1,3 @@
 DECORATOR PATTERN
+
+Category : Structural

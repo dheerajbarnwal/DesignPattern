@@ -1,1 +1,3 @@
-Singleton Pattern
+SINGLETON PATTERN
+
+Category : Creational
