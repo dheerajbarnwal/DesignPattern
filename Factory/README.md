@@ -6,5 +6,3 @@ Define an interface for creating an object, but let subclasses decide which clas
 Factory Method lets a class defer instantiation to subclasses.
 
 Used : JDK, Spring, Struts
-
-Example Implementa
