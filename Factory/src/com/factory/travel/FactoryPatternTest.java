@@ -19,12 +19,19 @@ public class FactoryPatternTest {
         System.out.println("Ticket Type(train/bus) : ");
         String ticketType = sc.next();
 
-        TicketInfo tinfo = TicketFactory.getTicket(ticketType, name, origin , destination);
+        TicketInfo info = new TicketInfo(name, origin , destination);
 
-        System.out.println("Here is your ticket");
+        Ticket ticket = TicketFactory.getTicket(ticketType);
 
-        System.out.println("Name : " + tinfo.name + "\nOrigin: " + tinfo.origin + "\nDestination: " + tinfo.destination
-                            + "\nCost: " + tinfo.cost);
+        if(ticket == null){
+            System.out.println("Invalid ticket type");
+            System.exit(0);
+        }
+        info = ticket.createTicket(info);
+
+        System.out.println("Hi "+ info.name.toUpperCase() + ", Here is your ticket");
+
+        System.out.println("Origin: " + info.origin + "\nDestination: " + info.destination + "\nPrice: " + info.cost);
 
     }
 }
